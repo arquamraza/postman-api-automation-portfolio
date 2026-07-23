@@ -7,13 +7,15 @@ Automated API Testing using Postman on reqres.in
 - **Response Validation**: Status code 200/201/204, total_pages, first_name check
 - **Data Driven Testing**: forEach loop se saare users validate kiye
 - **Headers**: x-api-key and Authorization Bearer token
+- Full CRUD Operations: Create, Read, Update, Delete
+- Header Validation: x-api-key authentication
 
 ## APIs Tested
 1. POST /api/login - Token generation
 2. GET /api/users?page=2 - Get all users with validation
-3. POST /api/users - Create user
+3. PUT /api/users - Create user
 4. DELETE /api/users/2 - Delete user
-
+   
 ## How to Run
 1. Download `My Collection.postman_collection.json`
 2. Import in Postman
