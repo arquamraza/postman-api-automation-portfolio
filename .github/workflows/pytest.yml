@@ -16,9 +16,10 @@ jobs:
           pip install pytest pytest-html requests
       - name: Run Tests
         run: |
+          cd pytest-api-automation
           pytest -v --html=report.html --self-contained-html
       - name: Upload Report
         uses: actions/upload-artifact@v4
         with:
           name: pytest-report
-          path: report.html
+          path: pytest-api-automation/report.html
