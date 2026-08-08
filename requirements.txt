@@ -1,3 +1,3 @@
-requets
+requests
 pytest
 pytest-html
