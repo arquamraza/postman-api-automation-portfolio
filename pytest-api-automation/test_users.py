@@ -1,4 +1,21 @@
-def test_get_users(base_url):
+import requests
+import pytest
+
+base_url = "https://reqres.in/api"
+
+def test_get_users():
+    response = requests.get(f"{base_url}/users?page=2")
+    assert response.status_code == 200
+
+def test_create_user():
+    data = {"name": "Arqam", "job": "SDET"}
+    response = requests.post(f"{base_url}/users", json=data)
+    assert response.status_code == 201
+
+def test_update_user():
+    data = {"name": "Arqam Updated"}
+    response = requests.put(f"{base_url}/users/2", json=data)
+    assert response.status_code == 200def test_get_users(base_url):
     response = requests.get(f"{base_url}/users?page=2")
     assert response.status_code == 200
     assert "data" in response.json()
